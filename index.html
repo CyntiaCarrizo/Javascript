@@ -5,10 +5,11 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Javascrip</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+   
+   
 </head>
 <body>
+
     <h1>Introduccion a Javascrip</h1>
     <p>Javascript nace en el año 1995 y esta basado en el standart Emacscript.Hoy JavaScript, es el único lenguaje que se puede hacer isomorfismo, es capaz de ejecutarse en las 3 capas de una aplicación:</p>
         <ul>
@@ -92,6 +93,60 @@
     <li>2)DECLARACIÓN DE VARIABLES.</li>
     <li>3)DECLARACIÓN DE FUNCIONES.</li>
     <li>4)EJECUCIÓN DE CÓDIGO.</li>
-</ul>   
+</ul>  
+<h1>Tipos de datos:</h1>
+<ul>
+    <h2>variable: </h2>
+        <li>lugar en la memoria de nuestra computadora para almacenar datos (primitivos y compuestos).tienen un ambito de existencia lo que se conoce como el scope de las variables. existen ambitos de bloques. si declaramos una variable con la palabra VAR esa variable va a ser de ambito global, mientras si declaramos con LET el ambito de esa variable sera LOCAL o de Bloque.</li>
+        <li>Para declarar una variable se lo hace con la palabra var</li> 
+        <li> Usar var es de mala practica.</li>
+        <li>Si se declara una variable con la palabra Var, dmicha variable sera de ambito global, mientras si declaramos con let sera de ambito de bloque </li> 
+        <li>El objeto Window es donde se almacena el ambito global en los navegadores. Mapea toda la ventana del navegador para JS. </li> 
+        <li>POr lo tanto todas las variables que declare con la palabra Var se van a quedar en el scope global del documento</li> 
+        
+</ul>
+<script>
+var hola="hola Mundo"
+console.log(hola)
+
+let hello="Hello World"
+console.log(hello)
+
+console.log(window)
+console.log(window.hola)
+console.log(window.hello)//manda un undefined xq la palabra reservada let solo permite que la variable exista en el bloque que ha sido definido
+
+console.log("**********************VAR**************************** ES UNA MALA PRACTICA PORQUE NO RESPETA LOS SCOPE DE BLOQUES")
+//Ambito de Global
+var musica="Rock"
+console.log("Variable Musica antes del bloque", musica)
+
+//Esto es un Bloque
+{
+    var musica="pop"
+    console.log("Variable musica dentro del bloque", musica)
+}
+
+//varible musica despues del bloque. DEBERIA IMPRIMIR ROCK 
+console.log("varible musica depues del bloque",musica)
+
+console.log("**********************LET****************************RESPETA EL COMPORTAMIENTO DE BLOQUE")
+
+//EJEMPLO DE MUSICA2
+let musica2="Rock"
+console.log("Variable Musica antes del bloque", musica2)
+
+//
+{
+    let musica2="pop"
+    console.log("Variable musica dentro del bloque", musica2)
+}
+
+//varible musica despues del bloque
+console.log("varible musica depues del bloque",musica2)
+
+
+</script>
 </body>
+
 </html>
