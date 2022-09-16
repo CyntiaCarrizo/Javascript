@@ -103,10 +103,15 @@
         <li>Si se declara una variable con la palabra Var, dmicha variable sera de ambito global, mientras si declaramos con let sera de ambito de bloque </li> 
         <li>El objeto Window es donde se almacena el ambito global en los navegadores. Mapea toda la ventana del navegador para JS. </li> 
         <li>POr lo tanto todas las variables que declare con la palabra Var se van a quedar en el scope global del documento</li> 
-        
+   <h2>Constantes</h2>
+        <li>SON VARIABLES QUE NO CAMBIAN SU VALOR. PERMITE CREAR VARIABLES.</li>
+        <li>USAMOS CUANDO TENGAMOS VARIABLES QUE NO VAN A CAMBIAR DE VALOR DURANTE EL FLUJO DE NUESTRA APLICACION.</li>  
+          <li>DEPENDIENDO DEL TIPO DE DATOS CONST PUEDE CAMBIAR SU VALOR.</li>  
+          <li>EN LOS DATOS COMPUESTOS PODEMOS USAR CONST PORQUE NO ESTAMOS ACCEDIENDO AL VALOR DIRACTAMENTE SINO A UNA REFERENCIA DE ESE VALOR Y EN ESE SENTIDO LA PALABRA RESERVADA CONST ME PERMITE AGREGARLE MAS PROP A MI OBJETO PORQUE PARA JS LA REFERENCIA DE MI OBJETO NO HA CAMBIADO SIGUE SIENDO UN OBJETO PERO CON 3 PROPIEDADES. LO MISMO PASA CON EL ARREGL</li> O
+           <li>SI DECLARO VALORES PRIMITIVOS CON CONST NO VOY A PODER ASIGNARLE UN NUEVO VALOR DESPUES. PERO SI DEFINO VALORES COMPUESTOS SI LE VOY A PODER AGREGAR O QUITAR ELEMENTOS</li>
 </ul>
 <script>
-var hola="hola Mundo"
+/*var hola="hola Mundo"
 console.log(hola)
 
 let hello="Hello World"
@@ -143,7 +148,56 @@ console.log("Variable Musica antes del bloque", musica2)
 }
 
 //varible musica despues del bloque
-console.log("varible musica depues del bloque",musica2)
+console.log("varible musica depues del bloque",musica2)*/
+
+console.log("**********************************CONSTANTES********")
+//CONSTANTES: SON VARIABLES QUE NO CAMBIAN SU VALOR. PERMITE CREAR VARIABLES.LO USAMOS CUANDO TENGAMOS VARIABLES QUE NO VAN A CAMBIAR DE VALOR DURANTE EL FLUJO DE NUESTRA APLICACION. DEPENDIENDO DEL TIPO DE DATOS CONST PUEDE CAMBIAR SU VALOR.
+// EN LOS DATOS COMPUESTOS PODEMOS USAR CONST PORQUE NO ESTAMOS ACCEDIENDO AL VALOR DIRACTAMENTE SINO A UNA REFERENCIA DE ESE VALOR Y EN ESE SENTIDO LA PALABRA RESERVADA CONST ME PERMITE AGREGARLE MAS PROP A MI OBJETO PORQUE PARA JS LA REFERENCIA DE MI OBJETO NO HA CAMBIADO SIGUE SIENDO UN OBJETO PERO CON 3 PROPIEDADES. LO MISMO PASA CON EL ARREGLO
+//SI DECLARO VALORES PRIMITIVOS CON CONST NO VOY A PODER ASIGNARLE UN NUEVO VALOR DESPUES. PERO SI DEFINO VALORES COMPUESTOS SI LE VOY A PODER AGREGAR O QUITAR ELEMNETOS
+const PI= 3.1416
+console.log(PI)
+
+//const NUEVE; // SALTA ERROR DE SINTAXIS PORQUE NO PUEDO TENER CONSTANTES VACIAS
+
+let a;//Me permite declarar una variable vacia para desp asignarle un valor cuando lo requiera
+a="Kenai";
+console.log(a)
+
+//Una constante no fumnciona de la misma manera para valores primitivos y para valores compuestos
+let objeto={
+    nombre:"jon",
+    edad:"35"
+}//UN OJETO ES UNA COLECCION DE ATRIBUTOS Y VALORES
+
+let colores= ["blanco","negro","azul"]//variable que almacena varias variables
+
+console.log(objeto);
+console.log(colores);
+
+//para crear una nueva propiedad al objeto solamente accedo con el punto a las propiedades
+objeto.correo="carrizocyntia22@gmail.com";
+
+//para agregar un nuevo color a los arreglos tengo que hacer uso de la palabra reservada push
+colores.push("anaranjado");
+
+console.log(objeto);
+console.log(colores);
+
+const objeto2={
+    nombre:"jon",
+    edad:"35"
+}
+
+const colores2= ["blanco","negro","azul"]
+
+objeto2.correo="carrizocyntia22@gmail.com";
+colores2.push("anaranjado");
+
+console.log(objeto2);
+console.log(colores2);
+
+
+
 
 
 </script>
