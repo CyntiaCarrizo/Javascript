@@ -118,9 +118,29 @@
         <p>UN OBJETO TIENEN DOS ATRIBUTOS MUY IMPORTANTES: </p>
             <li>1)LAS PROPIEDADES,SON ATRIBUTOS DE UN OBJETOS QUE ME VAN A DAR INFORMACION DEL OBJETO. SON CARACTERISTICAS QUE DEFINEN AL OBJETO. EJ: LENGHT (longitud de una cadena).</li> 
             <li>2)LOS METODOS: SON ACCIONES QUE EL OBJETO HACE. TODOS LOS METODOS TERMINAN CON PARENTESIS.SON ACCIONES O FUNCIONES QUE ME VAN A PERMITIR EJECUTAR ALGO CON LA VARIABLE O TIPO DE DATO CON EL QUE ESTE TRABAJANDO</li> 
-        
-    
-    
+    <h2>Numeros: </h2>
+       <p>es un objeto primitivo envolvente que permite representar y manipular valores numéricos cómo 37 o -9.25. El constructor Number contiene constantes y métodos para trabajar con números. Valores de otro tipo pueden ser convertidos a números usando la función Number().</p> 
+    <h2>Booleans: </h2>
+       <p>Un valor falso (a veces escrito falsey ) es un valor que se considera falso cuando se encuentra en un contexto booleano . JavaScript utiliza la conversión de tipos para forzar cualquier valor a un booleano en contextos que lo requieran, como condicionales y bucles . Valores falsos de JavaScript:</p>  
+                <li>1) false: valor falso</li>
+                <li>2) 0</li>
+                <li>3) -0</li>
+                <li>4) "": cadena vacia</li>
+                <li>5) null</li>
+                <li>6) undefined</li>
+                <li>7) NaN</li>
+                <p>Un valor verdadero es un valor que se considera truecuando se encuentra en un contexto booleano . Todos los valores son verdaderos a menos que se definan como falsos . Es decir, todos los valores son verdaderos excepto false, 0, -0, 0n, "", null, undefinedy NaN.</p>
+                <li>1) {}</li>
+                <li>2) []</li>
+                <li>3) 42 : un numero</li>
+                <li>4)"0" : una cadena de texto</li>
+                <li>5) new Date()</li>
+                <li>6) -42: unm numero negativo </li>
+                <li>7) 3.14: un numero decimal</li>
+                <li>8) -3.14: un decimal negativo</li>
+                <li>9) Infinity</li>
+                <li>10) -Infinity</li>
+
     </ul>
 <script>
 /*var hola="hola Mundo"
@@ -264,26 +284,40 @@ let ul2 = `
 console.log(ul2)*/
 
 
-console.log("******************************NUMEROS************************************")
+/*console.log("******************************NUMEROS************************************")
 
- CLASE7: NUMBERS
 let a= 2;
-let b= new Number(1);
+let b= new Number(1);//definido mediante su constructor
 let c= 7.19
-let d= "5.6";
+let d= "5.6";//cadena de texto
 
 console.log(typeof c, typeof d)//indica que tipo de dato es una variable
 console.log(a,b);
 console.log(c.toFixed(1));//dice cuanto n8umeros decimales va a tener un valor numerico
-console.log(c.toFixed(5));
-console.log(parseInt(c))//devuelve solo la parte emtera
-console.log(parseFloat(c));//imprime la parte flotante
-console.log(a+b);
-console.log(c+d);//hace el proceso de concatenacion debido a que la variable de es un string. por lo tanto para sumarlos debido a que son diferentes tipos de datos hay que hacer un castings, por lo de a "d" le hago un parseInt
-console.log(c+parseInt(d))
-console.log(c+parseFloat(d))
-//LO QUE SE VE EN CONSOLA EN COLOR AZUL ES NUMERO Y LO QUE SE VE EN NEGRO ES STRINGS
+console.log(c.toFixed(5));//7.19000
+console.log(parseInt(c))//devuelve solo la parte entera 7
+console.log(parseFloat(c));//imprime la parte flotante 7.19
+console.log(a+b);//3
+console.log(c+d);// 7.195.6 hace el proceso de concatenacion debido a que la variable de es un string. por lo tanto para sumarlos debido a que son diferentes tipos de datos hay que hacer un castings, por lo de a "d" le hago un parseInt
+console.log(c+parseInt(d))//12.19000000000001 sumo  la parte entera
+console.log(c+parseFloat(d))// 12.79 
+//LO QUE SE VE EN CONSOLA EN COLOR AZUL ES NUMERO Y LO QUE SE VE EN NEGRO ES STRINGS*/
 
+console.log("***********************************BOOLEANS******************************************************")
+
+let verdadero= true;
+let falso= false;
+let v= Boolean(true);
+let f= Boolean(false);
+
+console.log(verdadero,falso,v,f);
+console.log(typeof verdadero, typeof falso);
+
+//EXISTEN VALORES QUE TIENDEN A VERDADERO O FALSO. VER EN MDN TRURTY Y FALSY. TIENDEN A VERDADERO: TRUE, OBJETO VACIO, ARREGLO, NUMERO, FECHA, DECIMAL, DECIMAL NEGATIVO, INFINITO, INFINITO NEGATIVO. TIENDEN A FALSO: FALSE, NULL, UNDEFINED, 0, NaN, STRING VACIO.
+console.log(Boolean(0))//TIENDE A FALSO
+console.log(Boolean(-7))//TIENDE A VERDADERO
+console.log(Boolean(""))//CADENA DE TEXTO VACIA TIENDE A FALSO
+console.log(Boolean(","))//CUALQUIER CADENA DE TEXTO CON UN CARACTER TIENDE A VERDADERO
 
 
 
