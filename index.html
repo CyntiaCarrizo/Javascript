@@ -95,21 +95,23 @@
     <li>4)EJECUCIÓN DE CÓDIGO.</li>
 </ul>  
 <h1>Tipos de datos:</h1>
+<h1>Primitivos: se accede directamente al valor </h1>
+
 <ul>
-    <h2>Variable: </h2>
+    <h2>1)Variable: </h2>
         <li>lugar en la memoria de nuestra computadora para almacenar datos (primitivos y compuestos).tienen un ambito de existencia lo que se conoce como el scope de las variables. existen ambitos de bloques. si declaramos una variable con la palabra VAR esa variable va a ser de ambito global, mientras si declaramos con LET el ambito de esa variable sera LOCAL o de Bloque.</li>
         <li>Para declarar una variable se lo hace con la palabra var</li> 
         <li> Usar var es de mala practica.</li>
         <li>Si se declara una variable con la palabra Var, dmicha variable sera de ambito global, mientras si declaramos con let sera de ambito de bloque </li> 
         <li>El objeto Window es donde se almacena el ambito global en los navegadores. Mapea toda la ventana del navegador para JS. </li> 
         <li>POr lo tanto todas las variables que declare con la palabra Var se van a quedar en el scope global del documento</li> 
-   <h2>Constantes:</h2>
+   <h2>2)Constantes:</h2>
         <li>SON VARIABLES QUE NO CAMBIAN SU VALOR. PERMITE CREAR VARIABLES.</li>
         <li>USAMOS CUANDO TENGAMOS VARIABLES QUE NO VAN A CAMBIAR DE VALOR DURANTE EL FLUJO DE NUESTRA APLICACION.</li>  
           <li>DEPENDIENDO DEL TIPO DE DATOS CONST PUEDE CAMBIAR SU VALOR.</li>  
           <li>EN LOS DATOS COMPUESTOS PODEMOS USAR CONST PORQUE NO ESTAMOS ACCEDIENDO AL VALOR DIRACTAMENTE SINO A UNA REFERENCIA DE ESE VALOR Y EN ESE SENTIDO LA PALABRA RESERVADA CONST ME PERMITE AGREGARLE MAS PROP A MI OBJETO PORQUE PARA JS LA REFERENCIA DE MI OBJETO NO HA CAMBIADO SIGUE SIENDO UN OBJETO PERO CON 3 PROPIEDADES. LO MISMO PASA CON EL ARREGL</li> O
            <li>SI DECLARO VALORES PRIMITIVOS CON CONST NO VOY A PODER ASIGNARLE UN NUEVO VALOR DESPUES. PERO SI DEFINO VALORES COMPUESTOS SI LE VOY A PODER AGREGAR O QUITAR ELEMENTOS</li>
-    <h2>Strings:</h2>
+    <h2>3)Strings:</h2>
         <p>"En Javascrip todo es un objeto"</p>
         <p>Cadena de texto: es un texto que se encuentra encerrado entre comillas dobles o simples. Caracteristicas:</p>
             <li>1)Concatenacion: une una cadena de texto con una variable, que generalmente es de tipo cadena. Se lo hace con el signo +, siguiendo de la variable que contiene lo  mque queremos escribir </li>
@@ -118,9 +120,9 @@
         <p>UN OBJETO TIENEN DOS ATRIBUTOS MUY IMPORTANTES: </p>
             <li>1)LAS PROPIEDADES,SON ATRIBUTOS DE UN OBJETOS QUE ME VAN A DAR INFORMACION DEL OBJETO. SON CARACTERISTICAS QUE DEFINEN AL OBJETO. EJ: LENGHT (longitud de una cadena).</li> 
             <li>2)LOS METODOS: SON ACCIONES QUE EL OBJETO HACE. TODOS LOS METODOS TERMINAN CON PARENTESIS.SON ACCIONES O FUNCIONES QUE ME VAN A PERMITIR EJECUTAR ALGO CON LA VARIABLE O TIPO DE DATO CON EL QUE ESTE TRABAJANDO</li> 
-    <h2>Numeros: </h2>
+    <h2>4)Numeros: </h2>
        <p>es un objeto primitivo envolvente que permite representar y manipular valores numéricos cómo 37 o -9.25. El constructor Number contiene constantes y métodos para trabajar con números. Valores de otro tipo pueden ser convertidos a números usando la función Number().</p> 
-    <h2>Booleans: </h2>
+    <h2>5)Booleans: </h2>
        <p>Un valor falso (a veces escrito falsey ) es un valor que se considera falso cuando se encuentra en un contexto booleano . JavaScript utiliza la conversión de tipos para forzar cualquier valor a un booleano en contextos que lo requieran, como condicionales y bucles . Valores falsos de JavaScript:</p>  
                 <li>1) false: valor falso</li>
                 <li>2) 0</li>
@@ -140,8 +142,15 @@
                 <li>8) -3.14: un decimal negativo</li>
                 <li>9) Infinity</li>
                 <li>10) -Infinity</li>
+    <h2>6)null, undefined, NaN: null y undefined representan una variable que no tiene valor. Undefined es una variable que no ha sido inicializada, no tiene valor ni se le asigno ninguno cuando se la creo,es decir, es un valor dado por JS cuando detecta que una variable no tiene valor, mientras que null es un valor asignado a una variable intencionalmente por el programador </h2>
 
     </ul>
+    <h1>Compuestos: se accede a la referencia del valor </h1>
+    <li>1)Object {}</li>
+    <li>2)Array []</li>
+    <li>3)function ()</li>
+    <li>4)Class </li>
+ 
 <script>
 /*var hola="hola Mundo"
 console.log(hola)
@@ -303,7 +312,7 @@ console.log(c+parseInt(d))//12.19000000000001 sumo  la parte entera
 console.log(c+parseFloat(d))// 12.79 
 //LO QUE SE VE EN CONSOLA EN COLOR AZUL ES NUMERO Y LO QUE SE VE EN NEGRO ES STRINGS*/
 
-console.log("***********************************BOOLEANS******************************************************")
+/*console.log("***********************************BOOLEANS******************************************************")
 
 let verdadero= true;
 let falso= false;
@@ -317,9 +326,23 @@ console.log(typeof verdadero, typeof falso);
 console.log(Boolean(0))//TIENDE A FALSO
 console.log(Boolean(-7))//TIENDE A VERDADERO
 console.log(Boolean(""))//CADENA DE TEXTO VACIA TIENDE A FALSO
-console.log(Boolean(","))//CUALQUIER CADENA DE TEXTO CON UN CARACTER TIENDE A VERDADERO
+console.log(Boolean(","))//CUALQUIER CADENA DE TEXTO CON UN CARACTER TIENDE A VERDADERO*/
 
 
+console.log("******************************************NULL, UNDEFINED, NaN***************************************")
+
+//indmica quer no se ha inicializado una variable  y que el valor esta ausente
+ let indefinida;
+ console.log(indefinida);//imprime undefined
+
+
+ //null es unm valor especial que indica la ausencia de un valor 
+ let nulo= null //le asigno intencionalmente el valor de null. es un valor asignado por el programador
+ console.log(nulo)
+
+ //NaN not a number: 
+ let noEsUnNumero= "hola" * 3.7
+ console.log(noEsUnNumero)
 
 
 
