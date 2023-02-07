@@ -111,7 +111,10 @@
            <li>SI DECLARO VALORES PRIMITIVOS CON CONST NO VOY A PODER ASIGNARLE UN NUEVO VALOR DESPUES. PERO SI DEFINO VALORES COMPUESTOS SI LE VOY A PODER AGREGAR O QUITAR ELEMENTOS</li>
     <h2>Strings:</h2>
         <p>"En Javascrip todo es un objeto"</p>
-        <p>Cadena de texto: es un texto que se encuentra encerrado entre comillas dobles o simples</p>
+        <p>Cadena de texto: es un texto que se encuentra encerrado entre comillas dobles o simples. Caracteristicas:</p>
+            <li>1)Concatenacion: une una cadena de texto con una variable, que generalmente es de tipo cadena. Se lo hace con el signo +, siguiendo de la variable que contiene lo  mque queremos escribir </li>
+            <li>2)Interpolacion: meter dentro de una cadena de texto el valor dinamicamente de una variable, para ellos se hace uso de los templates strings. Se utiliza el acento invertido (alt 96), el signo dolar y entre llaves el nombre de la variable.
+                Los template String permiten los saltos de lineas no asi las cadenas de textos.  </li>
         <p>UN OBJETO TIENEN DOS ATRIBUTOS MUY IMPORTANTES: </p>
             <li>1)LAS PROPIEDADES,SON ATRIBUTOS DE UN OBJETOS QUE ME VAN A DAR INFORMACION DEL OBJETO. SON CARACTERISTICAS QUE DEFINEN AL OBJETO. EJ: LENGHT (longitud de una cadena).</li> 
             <li>2)LOS METODOS: SON ACCIONES QUE EL OBJETO HACE. TODOS LOS METODOS TERMINAN CON PARENTESIS.SON ACCIONES O FUNCIONES QUE ME VAN A PERMITIR EJECUTAR ALGO CON LA VARIABLE O TIPO DE DATO CON EL QUE ESTE TRABAJANDO</li> 
@@ -205,7 +208,7 @@ colores2.push("anaranjado");
 console.log(objeto2);
 console.log(colores2);*/
 
-console.log("*************************String***********************************")
+/*console.log("*************************String***********************************")
 //UN OBJETO TIENEN DOS ATRIBUTOS MUY IMPORTANTES: LAS PROPIEDADES,SON ATRIBUTOS DE UN OBJETOS QUE ME VAN A DAR INFORMACION DEL OBJETO. SON CARACTERISTICAS QUE DEFINEN AL OBJETO. EJ: LENGHT. Y LOS METODOS: SON ACCIONES QUE EL OBJETO HACE. TODOS LOS METODOS TERMINAN CON PARENTESIS. SON ACCIONES O FUNCIONES QUE ME VAN A PERMITIR EJECUTAR ALGO CON LA VARIABLE O TIPO DE DATO CON EL QUE ESTE TRABAJANDO
 
 let nombre="jon";
@@ -231,13 +234,34 @@ console.log(lorem.includes("cyntia"));//false
 console.log(lorem);//con espacio en blanco al incio
 console.log(lorem.trim());//quita los espacios en blanco  
 console.log(lorem.split(" "))//convierte una cademna de texto en arreglo (es una variable que dentro de si tiene varios valores) con cada espacio en blanco separandolo entre comillas
-console.log(lorem.split(","))
+console.log(lorem.split(","))*/
 
+console.log("**************************************************TEMPLATE STRINGS***************************************************")
 
+let nombre = "Cyntia"
+let apellido = "Carrizo"
 
+//CONCATENACION
+let saludo = "Hola mi nombre es " + nombre + " " + apellido + "."
+console.log(saludo)
 
+//INTERPOLACION
+//TEMPLATE STRINGS
+let saludo2 = `Hola mi nombre es ${nombre} ${apellido}`
+console.log(saludo2)
 
+let ul = "<ul><li>primavera</li><li>verano</li><li>otoño</li><li>Invierno</li></ul>"
+console.log(ul)//mno permite salto de linea. sino describe un error en consola
 
+let ul2 = `
+<ul>
+    <li>primavera</li>
+    <li>verano</li>
+    <li>otoño</li>
+    <li>Invierno</li>
+</ul>`
+
+console.log(ul2)
 </script>
 </body>
 
