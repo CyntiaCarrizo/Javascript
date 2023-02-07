@@ -96,20 +96,29 @@
 </ul>  
 <h1>Tipos de datos:</h1>
 <ul>
-    <h2>variable: </h2>
+    <h2>Variable: </h2>
         <li>lugar en la memoria de nuestra computadora para almacenar datos (primitivos y compuestos).tienen un ambito de existencia lo que se conoce como el scope de las variables. existen ambitos de bloques. si declaramos una variable con la palabra VAR esa variable va a ser de ambito global, mientras si declaramos con LET el ambito de esa variable sera LOCAL o de Bloque.</li>
         <li>Para declarar una variable se lo hace con la palabra var</li> 
         <li> Usar var es de mala practica.</li>
         <li>Si se declara una variable con la palabra Var, dmicha variable sera de ambito global, mientras si declaramos con let sera de ambito de bloque </li> 
         <li>El objeto Window es donde se almacena el ambito global en los navegadores. Mapea toda la ventana del navegador para JS. </li> 
         <li>POr lo tanto todas las variables que declare con la palabra Var se van a quedar en el scope global del documento</li> 
-   <h2>Constantes</h2>
+   <h2>Constantes:</h2>
         <li>SON VARIABLES QUE NO CAMBIAN SU VALOR. PERMITE CREAR VARIABLES.</li>
         <li>USAMOS CUANDO TENGAMOS VARIABLES QUE NO VAN A CAMBIAR DE VALOR DURANTE EL FLUJO DE NUESTRA APLICACION.</li>  
           <li>DEPENDIENDO DEL TIPO DE DATOS CONST PUEDE CAMBIAR SU VALOR.</li>  
           <li>EN LOS DATOS COMPUESTOS PODEMOS USAR CONST PORQUE NO ESTAMOS ACCEDIENDO AL VALOR DIRACTAMENTE SINO A UNA REFERENCIA DE ESE VALOR Y EN ESE SENTIDO LA PALABRA RESERVADA CONST ME PERMITE AGREGARLE MAS PROP A MI OBJETO PORQUE PARA JS LA REFERENCIA DE MI OBJETO NO HA CAMBIADO SIGUE SIENDO UN OBJETO PERO CON 3 PROPIEDADES. LO MISMO PASA CON EL ARREGL</li> O
            <li>SI DECLARO VALORES PRIMITIVOS CON CONST NO VOY A PODER ASIGNARLE UN NUEVO VALOR DESPUES. PERO SI DEFINO VALORES COMPUESTOS SI LE VOY A PODER AGREGAR O QUITAR ELEMENTOS</li>
-</ul>
+    <h2>Strings:</h2>
+        <p>"En Javascrip todo es un objeto"</p>
+        <p>Cadena de texto: es un texto que se encuentra encerrado entre comillas dobles o simples</p>
+        <p>UN OBJETO TIENEN DOS ATRIBUTOS MUY IMPORTANTES: </p>
+            <li>1)LAS PROPIEDADES,SON ATRIBUTOS DE UN OBJETOS QUE ME VAN A DAR INFORMACION DEL OBJETO. SON CARACTERISTICAS QUE DEFINEN AL OBJETO. EJ: LENGHT (longitud de una cadena).</li> 
+            <li>2)LOS METODOS: SON ACCIONES QUE EL OBJETO HACE. TODOS LOS METODOS TERMINAN CON PARENTESIS.SON ACCIONES O FUNCIONES QUE ME VAN A PERMITIR EJECUTAR ALGO CON LA VARIABLE O TIPO DE DATO CON EL QUE ESTE TRABAJANDO</li> 
+        
+    
+    
+    </ul>
 <script>
 /*var hola="hola Mundo"
 console.log(hola)
@@ -154,7 +163,7 @@ console.log("**********************************CONSTANTES********")
 //CONSTANTES: SON VARIABLES QUE NO CAMBIAN SU VALOR. PERMITE CREAR VARIABLES.LO USAMOS CUANDO TENGAMOS VARIABLES QUE NO VAN A CAMBIAR DE VALOR DURANTE EL FLUJO DE NUESTRA APLICACION. DEPENDIENDO DEL TIPO DE DATOS CONST PUEDE CAMBIAR SU VALOR.
 // EN LOS DATOS COMPUESTOS PODEMOS USAR CONST PORQUE NO ESTAMOS ACCEDIENDO AL VALOR DIRACTAMENTE SINO A UNA REFERENCIA DE ESE VALOR Y EN ESE SENTIDO LA PALABRA RESERVADA CONST ME PERMITE AGREGARLE MAS PROP A MI OBJETO PORQUE PARA JS LA REFERENCIA DE MI OBJETO NO HA CAMBIADO SIGUE SIENDO UN OBJETO PERO CON 3 PROPIEDADES. LO MISMO PASA CON EL ARREGLO
 //SI DECLARO VALORES PRIMITIVOS CON CONST NO VOY A PODER ASIGNARLE UN NUEVO VALOR DESPUES. PERO SI DEFINO VALORES COMPUESTOS SI LE VOY A PODER AGREGAR O QUITAR ELEMNETOS
-const PI= 3.1416
+/*const PI= 3.1416
 console.log(PI)
 
 //const NUEVE; // SALTA ERROR DE SINTAXIS PORQUE NO PUEDO TENER CONSTANTES VACIAS
@@ -194,7 +203,36 @@ objeto2.correo="carrizocyntia22@gmail.com";
 colores2.push("anaranjado");
 
 console.log(objeto2);
-console.log(colores2);
+console.log(colores2);*/
+
+console.log("*************************String***********************************")
+//UN OBJETO TIENEN DOS ATRIBUTOS MUY IMPORTANTES: LAS PROPIEDADES,SON ATRIBUTOS DE UN OBJETOS QUE ME VAN A DAR INFORMACION DEL OBJETO. SON CARACTERISTICAS QUE DEFINEN AL OBJETO. EJ: LENGHT. Y LOS METODOS: SON ACCIONES QUE EL OBJETO HACE. TODOS LOS METODOS TERMINAN CON PARENTESIS. SON ACCIONES O FUNCIONES QUE ME VAN A PERMITIR EJECUTAR ALGO CON LA VARIABLE O TIPO DE DATO CON EL QUE ESTE TRABAJANDO
+
+let nombre="jon";
+let apellido='carrizo';
+
+//Concatenacion
+let saludo1= "Hola mi nombre es" + nombre + " " + apellido + "."//podemos concatenar: significa unir una cadena de texto con una variable(generalmente de tipo cadena)
+let saludo= new String("hola mundo"); //Cadena de texto mediante un constructor. New (palabra reservada), me va a permitir crear un objeto nuevo de un cierto tipo de dato.
+
+console.log(nombre, apellido, saludo);
+
+console.log(
+nombre.length, 
+apellido.length, 
+saludo.length,
+nombre.toUpperCase(),
+apellido.toLowerCase());//el espacio en blanco tambien cuenta como caracter
+
+let lorem= "              Entre la cirrosis y la sobredosis andas siempre muñeca,con tu sucia camisa y en lugar de sonrisa una especie de mueca.Cómo no imaginarte, cómo no recordarte hace apenas dos años cuando eras la princesa de la boca de fresa,cuando tenías aún esa forma de hacerme daño."
+
+console.log(lorem.includes("princesa"));//true
+console.log(lorem.includes("cyntia"));//false
+console.log(lorem);//con espacio en blanco al incio
+console.log(lorem.trim());//quita los espacios en blanco  
+console.log(lorem.split(" "))//convierte una cademna de texto en arreglo (es una variable que dentro de si tiene varios valores) con cada espacio en blanco separandolo entre comillas
+console.log(lorem.split(","))
+
 
 
 
