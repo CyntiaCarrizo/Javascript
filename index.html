@@ -158,8 +158,13 @@
        <h2>2)Array []</h2>
         <p>es una coleccion de elementos que pueden ser de diferentes tipos: booleans, cadena un arreglo de letras. Su posicion comienza a contar desde CERO (0).</p>
 
-        <h2>1)Object {}</h2>
-  
+        <h2>1)Object {}:</h2>
+            <p>LET O CONST se pueden utilizar en variables de valores compuestos como los objetos y arreglos</p>
+            <p>Al declarar un objeto con CONST evito que otro objeto ocupe la referencia que en memoria tiene mi objeto.</p>  
+             <p>Un objeto dentro de si puede contener otro objeto</p>   clea
+             <p>Accedemos a sus propiedades o atributos mediante corchetes accediendo mpor medio de un punto</p>    
+             <p>Dentro de un objeto a las variables se la van a llamar atributos/propiedades y a las funciones se les llaman metodos</p>  
+             <p>Cuando queremos hacer uso de una propiedad dentro del objeto podemos utilizar la palabra THIS ( es el contexto donde nos encontramos x lo tanto this hace referencia al mismo objeto"const jon")</p> 
     
     <h2>4)Class </h2>
  
@@ -466,7 +471,109 @@ colores.forEach(function(el,index){
     console.log(`<li id="${index}">${el}</li>`)
 })
 
+colores.unshift('blanco') // Añade "blanco" al inicio
+console.log(colores)// ["blanco","rojo" ,"verde", "azul"]
 
+
+colores.shift() // Elimina "blanco" del inicio
+console.log(colores)// ["rojo", "verde","azul"]
+
+//encontrar el indicede un elemnto del array
+let pos =colores.indexOf('verde') // (pos) es la posición para abreviar
+console.log(pos)//1
+
+//elimirnar elemento mediante su posicion 
+/*Eliminamos "verde" del array pasándole dos parámetros: la posición del primer elemento que se elimina y el número de elementos que queremos
+ eliminar. De esta forma, .splice(pos, 1) empieza en la posición que nos indica el valor de la variable pos y elimina 1 elemento. En este caso,
+  como pos vale 1, elimina un elemento comenzando en la posición 1 del array, es decir "verde".*/
+
+  let elementoEliminado= colores.splice(pos,1)
+  console.log(elementoEliminado)//verde
+
+ 
+  // Eliminar varios elementos a partir de una posición
+ /*Nota:
+Con .splice() no solo se puede eliminar elementos del array, si no que también podemos extraerlos guardándolo en un nuevo array. ¡Ojo! 
+que al hacer esto estaríamos modificando el array de origen.*/
+
+let vegetales = ['Repollo', 'Nabo', 'Rábano', 'Zanahoria']
+console.log(vegetales)// ["Repollo", "Nabo", "Rábano", "Zanahoria"]
+
+let pos2 = 1, numElementos = 2
+
+let elementosEliminados = vegetales.splice(pos2, numElementos)
+// ["Nabo", "Rábano"] ==> Lo que se ha guardado en "elementosEliminados"
+
+console.log(vegetales)
+// ["Repollo", "Zanahoria"] ==> Lo que actualmente tiene "vegetales"
+
+//Copiar un Array
+let copiaArray = vegetales.slice();
+// ["Repollo", "Zanahoria"]; ==> Copiado en "copiaArray"
+
+/*console.log("************************************************OBJETOS*********************************************")
+
+//clase 12: OBJETOS
+//LET O CONST SE PUEDEN UTILIZAR EN VARIABLES DE VALORES COMPUESTOS COMO LOS OBJETOS Y ARREGLOS
+//AL DECLARAR UN OBJETO CON CONST EVITO QUE OTRO OBJETO OCUPE LA REFERENCIA QUE EN MEMORIA TIENE MI OBJETO.
+
+
+let a=new String("hola");
+console.log(a)
+
+const b={};
+console.log(b)
+
+const c= new Object();
+console.log(c)
+
+//UN OBJETO ES UN JUEGO DE LLAVE/VALOR
+//UN OBJETO DENTRO DE SI PUEDE CONTENER A OTRO OBJETO
+//ACCEDEMOS A SUS PROPIEDADES O ATRBUTOS MEDIANTE CORCHETESO ACCEDIENDO POR MEDIO DE UN PUNTO 
+//DENTRO DE UN OBJETOS A LAS VARIABLES SE LE VAN A LLAMAR ATRIBUTOS/PROPIEDADES Y A LAS FUNCIONES SE LES LLAMAN METODOS
+//CUANDO YO QUIERO HACER USO DE UNA PROPIEDAD DENTRO DEL OBJETO  PODEMOS UTILIZAR LA PLABRA "THIS"( es el contexto donde nos encontramos x lo tanto this hace referencia al mismo objeto"const jon")
+const jon={
+    nombre:"jon",
+    apellido:"mircha",
+    edad: 35,
+    pasatiempos:["correr","hacer ejercicios","dar clases"],
+    soltero: false,
+    contacto:{
+        email:"jonmircha@gmail.com",
+        twitter:"@jonmiercha",
+        movil:"03816205974"
+    },
+    saludar: function(){
+        console.log("hola :-)")
+    },
+    decirMiNombre: function(){
+        console.log(`hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir como ${this.contacto.twitter} en twitter.` )
+    }
+}
+
+jon.decirMiNombre();
+console.log(jon);
+console.log(jon["nombre"]);
+console.log(jon["apellido"]);
+console.log(jon.nombre)
+console.log(jon.edad)
+console.log(jon.soltero);
+console.log(jon.pasatiempos);
+console.log(jon.pasatiempos[1]);//accedo a la posicion del atributo que deseo mediante corchetes en un arreglo dentro del objeto
+console.log(jon.contacto);
+console.log(jon.contacto.twitter);//accedo a la posicion del atributo que deseo mediante un punto en un objeto qu}e se encuentra dentro de otro objeto
+jon.saludar();//asi ejecuto la funcion saludar que tiene de console.log "hola :)"
+
+ //KEYS: METODO QUE TIENE EL PROTOTIPO OBJECT DE JS QUE ME PERMITE LISTAR TODAS LAS LLAVES DEL OBJETO
+console.log(Object.keys(jon));
+
+
+//VALUES:METODO QUE ME DA EL VALOR  DE MIS LLAVES
+console.log(Object.values(jon));
+
+//ME PERMITE SABER SI UN OBJETO TIENE CIETA PROPIEDAD
+console.log(jon.hasOwnProperty("nombre"));
+console.log(jon.hasOwnProperty("_nacimiento"));*/
 
 </script>
 </body>
