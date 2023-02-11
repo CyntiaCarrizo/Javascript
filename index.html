@@ -142,13 +142,20 @@
                 <li>8) -3.14: un decimal negativo</li>
                 <li>9) Infinity</li>
                 <li>10) -Infinity</li>
-    <h2>6)null, undefined, NaN: null y undefined representan una variable que no tiene valor. Undefined es una variable que no ha sido inicializada, no tiene valor ni se le asigno ninguno cuando se la creo,es decir, es un valor dado por JS cuando detecta que una variable no tiene valor, mientras que null es un valor asignado a una variable intencionalmente por el programador </h2>
+    <h2>6)null, undefined, NaN:</h2>
+        <p>null y undefined representan una variable que no tiene valor. Undefined es una variable que no ha sido inicializada, no tiene valor ni se le asigno ninguno cuando se la creo,es decir, es un valor dado por JS cuando detecta que una variable no tiene valor, mientras que null es un valor asignado a una variable intencionalmente por el programador </p> 
 
     </ul>
     <h1>Compuestos: se accede a la referencia del valor </h1>
+    <h2>1)function ():</h2>
+         <p>es un bloque de codigo autocontenido independientemente al scope o ambito global que se puede definir una vez y ejecutarse en cualquier momento. Puede o no recibir parametros, tambien puede o no, dependiendo del caso devolver valores.</p>
+         <p>Son consideradas objetos</p>
+         <p>Se dice que las funciones son ciudadanos de primera clase porque pueden asignarse a un valor, y pueden pasarse como argumentos y usarse como un valor de retorno</p>
+         <p>Se puedemn pasar como argumemntos,m se pueden retornar como valores</p>
+         <p>TIPOS DE FUNCIONES: FUNCIONES DECLARADAS O FUNCIONES EXPRESADAS</p>
     <li>1)Object {}</li>
     <li>2)Array []</li>
-    <li>3)function ()</li>
+    
     <li>4)Class </li>
  
 <script>
@@ -329,7 +336,7 @@ console.log(Boolean(""))//CADENA DE TEXTO VACIA TIENDE A FALSO
 console.log(Boolean(","))//CUALQUIER CADENA DE TEXTO CON UN CARACTER TIENDE A VERDADERO*/
 
 
-console.log("******************************************NULL, UNDEFINED, NaN***************************************")
+/*console.log("******************************************NULL, UNDEFINED, NaN***************************************")
 
 //indmica quer no se ha inicializado una variable  y que el valor esta ausente
  let indefinida;
@@ -342,9 +349,70 @@ console.log("******************************************NULL, UNDEFINED, NaN*****
 
  //NaN not a number: 
  let noEsUnNumero= "hola" * 3.7
- console.log(noEsUnNumero)
+ console.log(noEsUnNumero)*/
 
 
+console.log("*****************************FUNCIONES***********************************")
+
+//TIPOS DE FUNCIONES: FUNCIONES DECLARADAS O FUNCIONES EXPRESADAS
+//FUNCION DECLARADA
+    function estoEsUnaFuncion(){
+        console.log("uno");
+        console.log("dos");
+        console.log("tres");
+    }
+
+    function unaFuncionQueDevuelveValor(){
+        console.log("tres");
+        return 19;//cuando el compilador encuentra la palabra return ignora todas las lineas que se encuentran debajo de el, retorna ese valor como valor de la funcion
+        console.log("cuatro");
+        console.log("cinco");
+        return "la funcion a retornado una cadena de texto"
+    }//cuando una funcion devuelve valor debemos utilizar una palabra reservada que se llama return
+        //una funcion puede devolver cualquier tipo de dato ya sea primitivo o compuesto
+
+
+    let valorDeFuncion= unaFuncionQueDevuelveValor();
+    console.log(valorDeFuncion);
+
+    //invocacion de la funcion 
+    estoEsUnaFuncion();
+    unaFuncionQueDevuelveValor();
+
+
+    //UNA FUNCION PUEDE ACEPTAR PARAMETROS
+    function saludar(nombre,edad){
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`)
+        }
+        saludar("kenai",7);
+        saludar();//en los parametros me figura undefined para ellos le puedo asignar un valor x defecto. como el siguiete ejemple
+
+        //le asigno un valor por defecto a los parametros
+        function saludar2(nombre="desconocido",edad= 0){
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`)
+        }
+        saludar2();
+
+
+//FUNCIONES DECLARADAS VS FUNCIONES EXPRESADAS
+
+funcionDeclarada();//se ejecuta esta funcion antes de su declaracion debido al hosting de JS realizados en las funciones. debido a que lo primero que ordena JS son variables y funciones
+
+function funcionDeclarada(){
+    console.log("esto es una funcion declarada, puede invocarse en cualquier parte de nuetsro codigo, incluso antes de que la funcion sea declarada")
+}
+
+funcionDeclarada();
+
+//FUNCIONES ANONIMA O FUNCION EXPRESADA asignandola a una variable
+//la funcion no lleva nombre xq su nombre es el que le hemos dado a la variable
+//funcionExpresada(); me da un error de referencia debido a que no puedo invocarlas antes de inicializarla'
+
+const funcionExpresada= function(){
+    console.log("esto es una funcion expresada, es decir, una funcion que se le ha asignado como valor a una varible, si invocamos esta funcion antes de su definicion JS nos dira: index.html:267 Uncaught ReferenceError: Cannot access 'funcionExpresada' before initialization")
+}
+
+funcionExpresada();
 
 
 
