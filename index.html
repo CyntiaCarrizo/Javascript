@@ -153,10 +153,15 @@
          <p>Se dice que las funciones son ciudadanos de primera clase porque pueden asignarse a un valor, y pueden pasarse como argumentos y usarse como un valor de retorno</p>
          <p>Se puedemn pasar como argumemntos,m se pueden retornar como valores</p>
          <p>TIPOS DE FUNCIONES: FUNCIONES DECLARADAS O FUNCIONES EXPRESADAS</p>
-    <li>1)Object {}</li>
-    <li>2)Array []</li>
+         <p>1)Funciones declaradas: puede invocarse en cualquier parte de nuetsro codigo, incluso antes de que la funcion sea declarada </p>
+        <p>2)Funciones expresadas: funcion que se le ha asignado como valor a una varible, si invocamos esta funcion antes de su definicion JS nos dira: index.html:267 Uncaught ReferenceError: Cannot access 'funcionExpresada' before initialization  </p>
+       <h2>2)Array []</h2>
+        <p>es una coleccion de elementos que pueden ser de diferentes tipos: booleans, cadena un arreglo de letras. Su posicion comienza a contar desde CERO (0).</p>
+
+        <h2>1)Object {}</h2>
+  
     
-    <li>4)Class </li>
+    <h2>4)Class </h2>
  
 <script>
 /*var hola="hola Mundo"
@@ -352,7 +357,7 @@ console.log(Boolean(","))//CUALQUIER CADENA DE TEXTO CON UN CARACTER TIENDE A VE
  console.log(noEsUnNumero)*/
 
 
-console.log("*****************************FUNCIONES***********************************")
+/*console.log("*****************************FUNCIONES***********************************")
 
 //TIPOS DE FUNCIONES: FUNCIONES DECLARADAS O FUNCIONES EXPRESADAS
 //FUNCION DECLARADA
@@ -412,7 +417,54 @@ const funcionExpresada= function(){
     console.log("esto es una funcion expresada, es decir, una funcion que se le ha asignado como valor a una varible, si invocamos esta funcion antes de su definicion JS nos dira: index.html:267 Uncaught ReferenceError: Cannot access 'funcionExpresada' before initialization")
 }
 
-funcionExpresada();
+funcionExpresada();*/
+
+console.log("******************************************ARRAYS******************************************************")
+
+//CLASE 11: ARREGLOS [ARRAYS]. 
+
+const a=[];
+const b= [1,true,"hola",["A","B","C",[1,2,3]]];
+console.log(a);
+console.log(b);
+console.log(b.length)//length en los arreglos me devuelve en numero de elementos dentro de el 
+console.log(b[2])//para imprimir la palabra "hola" en la consola tengo que acceder a la coordenada de donde se encuentra la palabra "hola". la palabra hola es el tercer elemento x lo tanto ocupa la 2*posicion. entre corchetes ponemos la posicion
+console.log(b[0]);
+console.log(b[3]);
+console.log(b[3][2])//defino la 1*cordenada del arreglo y luego la posicion del arreglo a la cual quiero acceder
+console.log(b[3][3][0])//imprime el numeor 1
+
+const c= Array.of["X","Y","Z",9,8,7]//otra manera de crear arreglos es con Array.of[]
+console.log(c);
+
+//hay un metodo que me permite inicializar un arreglo y asignarle a todas sus posiciones el mismo valor
+const d= Array(100).fill(false);//imprime 100 posiciones con el valor de false
+console.log(d);
+
+//formas menos utilizadas de arrays
+const e= new Array();
+console.log(e);
+
+const f= new Array(1,2,3, true, false);
+console.log(f);
+
+//METODOS DE LOS ARREGLOS
+const colores= ["rojo","verde","azul"];
+console.log(colores);
+
+colores.push("rosa");//push agrega un elemnto al final
+console.log(colores);
+
+colores.pop();//quita el ultimo elemento
+console.log(colores);
+
+//nos permite ejecutar una funcion por cada uno de los elemnetos que tenga un arreglo. Se le pasa un parametro (el) que es el elemento que esta recorriendo o iterando.
+//Podemos pasarle un 2* parametro al metodo ForEach que indica la posicion que ocupa ese elemento dentro del arreglo (index)
+//con este metodo forEach se recorre el valor con el 1* parametro y con el 2* la posicion que ocupa dicho elemento en el arreglo
+
+colores.forEach(function(el,index){
+    console.log(`<li id="${index}">${el}</li>`)
+})
 
 
 
